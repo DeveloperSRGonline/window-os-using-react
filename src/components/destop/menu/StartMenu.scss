@@ -1,0 +1,60 @@
+.start-menu {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  width: 300px;
+  background: rgba(40, 40, 40, 0.655);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cfcfcf;
+  z-index: 99;
+  backdrop-filter: blur(8px);
+  animation: slideUp 0.3s ease-in-out;
+  border: 1px solid rgb(0, 162, 255);
+}
+
+.start-menu-header {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.start-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.start-menu-icon {
+  text-align: center;
+  cursor: pointer;
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);;
+    border-radius: 8px;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

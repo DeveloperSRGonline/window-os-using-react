@@ -1,0 +1,89 @@
+.app-window {
+  width: 600px;
+  height: 400px;
+  background-color: #1e1e1e7a;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+  border: 1px solid rgb(0, 162, 255);
+}
+
+.app-header {
+  background: linear-gradient(90deg, #2d2d2d, #00140b);
+  height: 32px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  cursor: move;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.app-header span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.window-buttons button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(210, 255, 198);
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.window-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.minimize-btn {
+  color: gold;
+}
+
+.close-btn {
+  color: red;
+}
+
+.app-body {
+  flex: 1;
+  background-color: #252526;
+  padding: 16px;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
